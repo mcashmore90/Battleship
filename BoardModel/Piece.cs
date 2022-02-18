@@ -8,8 +8,10 @@ namespace BoardModel
     public class Piece
     {
         public string Name { get; set; }
+        public bool IsDestroyed { get; set; }
         public List<Cell> Tokens { get; set; }
 
-        
+        //public Piece()
+        //{ }
     }
 }

@@ -23,52 +23,58 @@ namespace BoardModel
                 new Piece()
                 {
                     Name = "Carrier",
+                    IsDestroyed = false,
                     Tokens = new List<Cell>
                     {
-                        new Cell(0,0,"[C]"),
-                        new Cell(0,0,"[C]"),
-                        new Cell(0,0,"[C]"),
-                        new Cell(0,0,"[C]"),
-                        new Cell(0,0,"[C]")
+                        new Cell(0,0,"[C]",true),
+                        new Cell(0,0,"[C]",true),
+                        new Cell(0,0,"[C]",true),
+                        new Cell(0,0,"[C]",true),
+                        new Cell(0,0,"[C]",true)
                     }
                 },
                 new Piece()
                 {
                     Name = "BattleShip",
+                    IsDestroyed = false,
                     Tokens = new List<Cell>
                     {
-                        new Cell(0,0,"[B]"),
-                        new Cell(0,0,"[B]"),
-                        new Cell(0,0,"[B]"),
-                        new Cell(0,0,"[B]")
+                        new Cell(0,0,"[B]",true),
+                        new Cell(0,0,"[B]",true),
+                        new Cell(0,0,"[B]",true),
+                        new Cell(0,0,"[B]",true)
                     }
                 },
                 new Piece()
                 {
                     Name = "Destroyer",
+                    IsDestroyed = false,
                     Tokens = new List<Cell>
                     {
-                        new Cell(0,0,"[D]"),
-                        new Cell(0,0,"[D]"),
-                        new Cell(0,0,"[D]")
+                        new Cell(0,0,"[D]",true),
+                        new Cell(0,0,"[D]",true),
+                        new Cell(0,0,"[D]",true)
                     }
                 },
                 new Piece()
                 {
                     Name = "Submarine",
+                    IsDestroyed = false,
                     Tokens = new List<Cell>
                     {
-                        new Cell(0,0,"[S]"),
-                        new Cell(0,0,"[S]"),
-                        new Cell(0,0,"[S]")
+                        new Cell(0,0,"[S]",true),
+                        new Cell(0,0,"[S]",true),
+                        new Cell(0,0,"[S]",true)
                     }
                 },
                 new Piece()
-                {   Name = "Patrol Boat",
+                {   
+                    Name = "Patrol Boat",
+                    IsDestroyed = false,
                     Tokens = new List<Cell>
                     {
-                        new Cell(0,0,"[P]"),
-                        new Cell(0,0,"[P]")
+                        new Cell(0,0,"[P]",true),
+                        new Cell(0,0,"[P]",true)
                     }
                 }
             };
