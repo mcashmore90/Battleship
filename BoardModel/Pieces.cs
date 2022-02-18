@@ -4,13 +4,10 @@ using System.Text;
 
 namespace BoardModel
 {
+    //Public class to hold all the Pieces/boats for the game
     public class Pieces
     {
-        public List<Cell> Carrier { get; set; }
-        public List<Cell> BattleShip { get; set; }
-        public List<Cell> Destroyer { get; set; }
-        public List<Cell> Submarine { get; set; }
-        public List<Cell> Patrol { get; set; }
+        public List<Piece> PieceItems { get; set; }
 
         public Pieces()
         {
@@ -19,43 +16,64 @@ namespace BoardModel
 
         //Seeds data for boat pieces
         //Coordinates set to 0,0 for constructor
-        private void SeedData()
+        void SeedData()
         {
-            //Set Carrier pieces
-            Carrier = new List<Cell> {
-                new Cell(0,0,"[C]"),
-                new Cell(0,0,"[C]"),
-                new Cell(0,0,"[C]"),
-                new Cell(0,0,"[C]"),
-                new Cell(0,0,"[C]")
+            List<Piece> p = new List<Piece>
+            {
+                new Piece()
+                {
+                    Name = "Carrier",
+                    Tokens = new List<Cell>
+                    {
+                        new Cell(0,0,"[C]"),
+                        new Cell(0,0,"[C]"),
+                        new Cell(0,0,"[C]"),
+                        new Cell(0,0,"[C]"),
+                        new Cell(0,0,"[C]")
+                    }
+                },
+                new Piece()
+                {
+                    Name = "BattleShip",
+                    Tokens = new List<Cell>
+                    {
+                        new Cell(0,0,"[B]"),
+                        new Cell(0,0,"[B]"),
+                        new Cell(0,0,"[B]"),
+                        new Cell(0,0,"[B]")
+                    }
+                },
+                new Piece()
+                {
+                    Name = "Destroyer",
+                    Tokens = new List<Cell>
+                    {
+                        new Cell(0,0,"[D]"),
+                        new Cell(0,0,"[D]"),
+                        new Cell(0,0,"[D]")
+                    }
+                },
+                new Piece()
+                {
+                    Name = "Submarine",
+                    Tokens = new List<Cell>
+                    {
+                        new Cell(0,0,"[S]"),
+                        new Cell(0,0,"[S]"),
+                        new Cell(0,0,"[S]")
+                    }
+                },
+                new Piece()
+                {   Name = "Patrol Boat",
+                    Tokens = new List<Cell>
+                    {
+                        new Cell(0,0,"[P]"),
+                        new Cell(0,0,"[P]")
+                    }
+                }
             };
-            //Set Battleship
-            BattleShip=new List<Cell> {
-                new Cell(0,0,"[B]"),
-                new Cell(0,0,"[B]"),
-                new Cell(0,0,"[B]"),
-                new Cell(0,0,"[B]")
-            };
-
-            //Set Destroyer
-            Destroyer = new List<Cell> {
-                new Cell(0,0,"[D]"),
-                new Cell(0,0,"[D]"),
-                new Cell(0,0,"[D]")
-            };
-
-            //Set Submarine
-            Submarine = new List<Cell> {
-                new Cell(0,0,"[S]"),
-                new Cell(0,0,"[S]"),
-                new Cell(0,0,"[S]")
-            };
-
-            //Set Patrol Boat
-            Patrol = new List<Cell> {
-                new Cell(0,0,"[P]"),
-                new Cell(0,0,"[P]")
-            };
+            PieceItems = new List<Piece>();
+            PieceItems.AddRange(p);
         }
     }
 }
